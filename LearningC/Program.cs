@@ -10,7 +10,10 @@ namespace LearningC
         static void Main(string[] args)
         {
 
-            var book = new Book();
+            var book = new Book("Testing book");
+            book.AddGrade(80);
+            book.AddGrade(77.4);
+
             while (input != 'q')
             {
                 Console.WriteLine("digite...");
