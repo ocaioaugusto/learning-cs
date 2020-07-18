@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{DD0C6077-77A3-4D03-81C0-8DA19D86ABB2}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="LearningC/Book.cs">
     <Files>
-      <File FileName="LearningC/Book.cs" Line="61" Column="40" />
+      <File FileName="LearningC/Book.cs" Line="38" Column="21" />
       <File FileName="LearningC/Program.cs" Line="22" Column="1" />
     </Files>
     <Pads>

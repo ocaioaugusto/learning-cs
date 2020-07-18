@@ -35,6 +35,9 @@ namespace LearningC
             if (grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
+            } else
+            {
+                throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
 
