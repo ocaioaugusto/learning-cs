@@ -1,0 +1,12 @@
+/Users/caioaugusto/Projects/LearningC/LearningC/bin/Debug/netcoreapp3.1/LearningC.deps.json
+/Users/caioaugusto/Projects/LearningC/LearningC/bin/Debug/netcoreapp3.1/LearningC.runtimeconfig.json
+/Users/caioaugusto/Projects/LearningC/LearningC/bin/Debug/netcoreapp3.1/LearningC.runtimeconfig.dev.json
+/Users/caioaugusto/Projects/LearningC/LearningC/bin/Debug/netcoreapp3.1/LearningC.dll
+/Users/caioaugusto/Projects/LearningC/LearningC/bin/Debug/netcoreapp3.1/LearningC.pdb
+/Users/caioaugusto/Projects/LearningC/LearningC/obj/Debug/netcoreapp3.1/LearningC.csprojAssemblyReference.cache
+/Users/caioaugusto/Projects/LearningC/LearningC/obj/Debug/netcoreapp3.1/LearningC.AssemblyInfoInputs.cache
+/Users/caioaugusto/Projects/LearningC/LearningC/obj/Debug/netcoreapp3.1/LearningC.AssemblyInfo.cs
+/Users/caioaugusto/Projects/LearningC/LearningC/obj/Debug/netcoreapp3.1/LearningC.csproj.CoreCompileInputs.cache
+/Users/caioaugusto/Projects/LearningC/LearningC/obj/Debug/netcoreapp3.1/LearningC.dll
+/Users/caioaugusto/Projects/LearningC/LearningC/obj/Debug/netcoreapp3.1/LearningC.pdb
+/Users/caioaugusto/Projects/LearningC/LearningC/obj/Debug/netcoreapp3.1/LearningC.genruntimeconfig.cache
