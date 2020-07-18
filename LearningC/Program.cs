@@ -16,7 +16,13 @@ namespace LearningC
             book.AddGrade(10);
 
 
-            book.ShowStatistics();
+            book.getStatistics();
+
+            var stats = book.getStatistics();
+
+            Console.WriteLine($"The lowest grade is {stats.Low}");
+            Console.WriteLine($"The highest grade is {stats.High}");
+            Console.WriteLine($"The average grade is {stats.Average:N1}");
         }
     }
 }

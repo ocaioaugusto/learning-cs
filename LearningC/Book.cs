@@ -3,34 +3,38 @@ using System.Collections.Generic;
 
 namespace LearningC
 {
-    class Book
+    public class Book
     {
         public Book(string name)
         {
             grades = new List<double>();
             this.name = name;
         }
+
         public void AddGrade(double grade)
         {
             grades.Add(grade);
         }
-        internal void ShowStatistics()
-        {
-            var result = 0.0;
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
 
-            foreach (var number in grades)
+        public Statistics getStatistics()
+        {
+            var result = new Statistics
             {
-                lowGrade = Math.Min(number, lowGrade);
-                highGrade = Math.Max(number, highGrade);
-                result += number;
+                Average = 0.0,
+                High = double.MinValue,
+                Low = double.MaxValue
+            };
+
+            foreach (var grade in grades)
+            {
+                result.Low = Math.Min(grade, result.Low);
+                result.High = Math.Max(grade, result.High);
+                result.Average += grade;
             }
 
-            result /= grades.Count;
-            Console.WriteLine($"The lowest grade is {lowGrade}");
-            Console.WriteLine($"The highest grade is {highGrade}");
-            Console.WriteLine($"The average grade is {result:N1}");
+            result.Average /= grades.Count;
+
+            return result;
 
         }
 
