@@ -11,16 +11,9 @@ namespace LearningC
         {
 
             var book = new Book("Testing book");
-            book.AddGrade(80);
-            book.AddGrade(77.4);
-
-            while (input != 'q')
-            {
-                Console.WriteLine("digite...");
-                var input = Console.ReadLine();
-                var grade = double.Parse(input);
-                book.AddGrade(grade);
-            }
+            book.AddGrade(5);
+            book.AddGrade(10);
+            book.AddGrade(10);
 
 
             book.ShowStatistics();
