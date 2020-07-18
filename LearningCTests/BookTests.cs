@@ -1,3 +1,4 @@
+
 using System;
 using LearningC;
 using Xunit;
@@ -7,7 +8,7 @@ namespace LearningCTests
     public class BookTests
     {
         [Fact]
-        public void Test1()
+        public void CheckIfGradesMatch()
         {
             var book = new Book("");
 

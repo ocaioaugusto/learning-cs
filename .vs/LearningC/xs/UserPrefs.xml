@@ -1,18 +1,17 @@
 ﻿<Properties StartupConfiguration="{DD0C6077-77A3-4D03-81C0-8DA19D86ABB2}|Default">
   <MonoDevelop.Ide.Workbench>
     <Files>
+      <File FileName="LearningC/Book.cs" Line="61" Column="40" />
       <File FileName="LearningC/Program.cs" Line="22" Column="1" />
-      <File FileName="LearningC/Book.cs" Line="25" Column="28" />
-      <File FileName="LearningCTests/UnitTest1.cs" Line="22" Column="45" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LearningC" expanded="True">
-            <Node name="LearningC" expanded="True" />
-            <Node name="LearningCTests" expanded="True">
-              <Node name="BookTests.cs" selected="True" />
+            <Node name="LearningC" expanded="True">
+              <Node name="Book.cs" selected="True" />
             </Node>
+            <Node name="LearningCTests" expanded="True" />
           </Node>
         </State>
       </Pad>
