@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using static LearningC.Interfaces;
 
 namespace LearningC
 {
@@ -10,9 +11,9 @@ namespace LearningC
         static void Main(string[] args)
         {
 
-            var book = new InMemoryBook("Testing book");
+            IBook book = new DiskBook("Testing book");
             book.GradeAdded += OnGradeAdded;
-            EnterGrades(book);
+            EnterGrades((Book)book);
 
             var stats = book.GetStatistics();
 

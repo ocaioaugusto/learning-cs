@@ -13,14 +13,9 @@ namespace LearningC
 
         }
 
-        public event GradeAddedDelegate GradeAdded;
-
+        public abstract event GradeAddedDelegate GradeAdded;
         public abstract void AddGrade(double grade);
-
-        public virtual Statistics GetStatistics()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract Statistics GetStatistics();
     }
 
     public class InMemoryBook : Book
@@ -55,55 +50,27 @@ namespace LearningC
             if (grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
-                GradeAdded?.Invoke(this, new EventArgs());
             } else
             {
                 throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
 
-        public new GradeAddedDelegate GradeAdded;
+        public override event GradeAddedDelegate GradeAdded;
 
         public override Statistics GetStatistics()
         {
-            var result = new Statistics
-            {
-                Average = 0.0,
-                High = double.MinValue,
-                Low = double.MaxValue
-            };
+            var result = new Statistics();
 
-            foreach (var grade in grades)
+            for (var i = 0; i < grades.Count; i += 1)
             {
-                result.Low = Math.Min(grade, result.Low);
-                result.High = Math.Max(grade, result.High);
-                result.Average += grade;
+                result.Add(grades[i]);
             }
 
-            result.Average /= grades.Count;
-
-            switch(result.Average)
-            {
-                case var d when d >= 90:
-                    result.Letter = "A";
-                    break;
-                case var d when d >= 80:
-                    result.Letter = "B";
-                    break;
-                case var d when d >= 70:
-                    result.Letter = "C";
-                    break;
-                case var d when d >= 60:
-                    result.Letter = "D";
-                    break;
-                default:
-                    result.Letter = "F";
-                    break;
-            }
+            
             return result;
         }
 
         private List<double> grades;
-
     }
 }
