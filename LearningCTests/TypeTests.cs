@@ -15,9 +15,9 @@ namespace LearningCTests
             Assert.Equal("New Name", book1.Name);
         }
 
-        private void SetGetName(ref Book book, string name)
+        private void SetGetName(ref InMemoryBook book, string name)
         {
-            book = new Book(name);
+            book = new InMemoryBook(name);
         }
 
         [Fact]
@@ -29,14 +29,14 @@ namespace LearningCTests
             Assert.Equal("New Name", book1.Name);
         }
 
-        private void SetName(Book book, string name)
+        private void SetName(InMemoryBook book, string name)
         {
             book.Name = name;
         }
 
-        Book getBook(string name)
+        InMemoryBook getBook(string name)
         {
-            return new Book(name);
+            return new InMemoryBook(name);
         }
     }
 }

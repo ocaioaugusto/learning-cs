@@ -1,13 +1,31 @@
 ﻿using System;
 using System.Collections.Generic;
+using static LearningC.Interfaces;
 
 namespace LearningC
 {
     public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-    public class Book
+    public abstract class Book : NamedObject, IBook
     {
-        public Book(string name)
+        public Book(string name) : base(name)
+        {
+
+        }
+
+        public event GradeAddedDelegate GradeAdded;
+
+        public abstract void AddGrade(double grade);
+
+        public virtual Statistics GetStatistics()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class InMemoryBook : Book
+    {
+        public InMemoryBook(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
@@ -32,7 +50,7 @@ namespace LearningC
             }
         }
 
-        public void AddGrade(double grade)
+        public override void AddGrade(double grade)
         {
             if (grade <= 100 && grade >= 0)
             {
@@ -44,9 +62,9 @@ namespace LearningC
             }
         }
 
-        public GradeAddedDelegate GradeAdded;
+        public new GradeAddedDelegate GradeAdded;
 
-        public Statistics GetStatistics()
+        public override Statistics GetStatistics()
         {
             var result = new Statistics
             {
@@ -87,6 +105,5 @@ namespace LearningC
 
         private List<double> grades;
 
-        public string Name;
     }
 }
