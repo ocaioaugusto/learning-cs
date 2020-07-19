@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace LearningC
 {
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+
     public class Book
     {
         public Book(string name)
@@ -35,13 +37,16 @@ namespace LearningC
             if (grade <= 100 && grade >= 0)
             {
                 grades.Add(grade);
+                GradeAdded?.Invoke(this, new EventArgs());
             } else
             {
                 throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
 
-        public Statistics getStatistics()
+        public GradeAddedDelegate GradeAdded;
+
+        public Statistics GetStatistics()
         {
             var result = new Statistics
             {

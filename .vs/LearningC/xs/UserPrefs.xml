@@ -1,15 +1,15 @@
 ﻿<Properties StartupConfiguration="{DD0C6077-77A3-4D03-81C0-8DA19D86ABB2}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="LearningC/Book.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LearningC/Program.cs">
     <Files>
-      <File FileName="LearningC/Book.cs" Line="38" Column="21" />
-      <File FileName="LearningC/Program.cs" Line="22" Column="1" />
+      <File FileName="LearningC/Book.cs" Line="40" Column="58" />
+      <File FileName="LearningC/Program.cs" Line="34" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LearningC" expanded="True">
             <Node name="LearningC" expanded="True">
-              <Node name="Book.cs" selected="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
             <Node name="LearningCTests" expanded="True" />
           </Node>
